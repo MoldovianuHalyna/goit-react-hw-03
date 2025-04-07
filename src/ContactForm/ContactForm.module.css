@@ -1,0 +1,63 @@
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  background-color: #5b99f0;
+  border-radius: 10px;
+  color: #f0f8ff;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 10px 10px 20px #5b99f0;
+  & h3 {
+    margin: 10px;
+  }
+}
+.formLabel {
+  text-align: center;
+  font-size: 25px;
+}
+.formInput {
+  outline: transparent;
+  border: 2px solid #4479c8;
+  color: #f0f8ff;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  padding: 0 10px 0 10px;
+  border-radius: 4px;
+  transition: all 250ms linear;
+  &:hover {
+    border: 2px solid #c1d4f0;
+    background-color: transparent;
+    scale: 1.1;
+  }
+  &:active {
+    border: 2px solid #c1d4f0;
+    background-color: transparent;
+    scale: 1.1;
+  }
+  &:-webkit-autofill {
+    border: 2px solid #c1d4f0;
+    -webkit-text-fill-color: #4479c8;
+    scale: 1.1;
+  }
+}
+.buttonAddContact {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  max-width: fit-content;
+  align-self: center;
+  border-radius: 4px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  background-color: #5090ef;
+  color: #f0f8ff;
+  font-size: 20px;
+  transition: all 250ms linear;
+  &:hover,
+  &:active {
+    border: 2px solid #d8e0ed;
+    scale: 1.1;
+  }
+}

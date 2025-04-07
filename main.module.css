@@ -1,4 +1,5 @@
 @import "node_modules/modern-normalize/modern-normalize.css";
+
 body {
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
@@ -9,4 +10,8 @@ body {
   color: #5b99f0;
   text-transform: uppercase;
   text-align: center;
+}
+.customToastDelete {
+  background-color: #5b99f0;
+  color: #f0f8ff;
 }

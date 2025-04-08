@@ -56,7 +56,7 @@ const ContactForm = ({ addContact }) => {
           <label className={s.formLabel}>
             <h3>Name</h3>
             <Field className={s.formInput} type="text" name="phone"></Field>
-            <ErrorMessage className={s.error} name="name" component="p" />
+            <ErrorMessage className={s.error} name="phone" component="p" />
           </label>
           <button className={s.buttonAddContact} type="submit">
             Add contact

@@ -1,7 +1,7 @@
-import ContactForm from "./src/ContactForm/ContactForm";
-import ContactList from "./src/ContactList/ContactList";
-import Container from "./src/Container/Container";
-import SearchBox from "./src/SearchBox/SearchBox";
+import ContactForm from "./src/components/ContactForm/ContactForm";
+import ContactList from "./src/components/ContactList/ContactList";
+import Container from "./src/components/Container/Container";
+import SearchBox from "./src/components/SearchBox/SearchBox";
 import { ToastContainer, toast } from "react-toastify";
 import { Slide } from "react-toastify";
 import { MdDeleteOutline } from "react-icons/md";

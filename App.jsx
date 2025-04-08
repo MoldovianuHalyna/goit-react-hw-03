@@ -8,23 +8,22 @@ import { MdDeleteOutline } from "react-icons/md";
 
 import { useEffect, useState } from "react";
 import s from "./main.module.css";
+const INITIAL_STATE = [
+  { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
+  { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
+  { id: "id-3", name: "Eden Clements", number: "645-17-79" },
+  { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
+];
 
 function App() {
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState(
+    () => JSON.parse(localStorage.getItem("contacts")) || []
+  );
   const [filter, setFilter] = useState("");
+
   useEffect(() => {
-    const savedContacts = localStorage.getItem("contacts");
-    if (savedContacts) {
-      setContacts(JSON.parse(savedContacts));
-    } else {
-      setContacts([
-        // { id: "id-1", name: "Rosie Simpson", number: "459-12-56" },
-        // { id: "id-2", name: "Hermione Kline", number: "443-89-12" },
-        // { id: "id-3", name: "Eden Clements", number: "645-17-79" },
-        // { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
-      ]);
-    }
-  }, []);
+    localStorage.setItem("contacts", JSON.stringify(contacts));
+  }, [contacts]);
 
   const handleChangeInput = (event) => {
     const { value } = event.target;
@@ -38,7 +37,6 @@ function App() {
   const addContact = (contact) => {
     const newContacts = [contact, ...contacts];
     setContacts(newContacts);
-    localStorage.setItem("contacts", JSON.stringify(newContacts));
   };
   const deleteContact = (id) => {
     const newContacts = contacts.filter((contact) => contact.id !== id);

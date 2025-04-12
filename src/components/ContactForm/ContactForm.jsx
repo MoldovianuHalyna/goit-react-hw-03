@@ -54,7 +54,7 @@ const ContactForm = ({ addContact }) => {
             <ErrorMessage className={s.error} name="name" component="p" />
           </label>
           <label className={s.formLabel}>
-            <h3>Name</h3>
+            <h3>Phone number</h3>
             <Field className={s.formInput} type="text" name="phone"></Field>
             <ErrorMessage className={s.error} name="phone" component="p" />
           </label>
